@@ -1,5 +1,11 @@
 const {expect} = require('chai');
 const {average} = require('../average');
+function average(numbers) {
+   numbers=numbers.filter(Boolean);
+   return numbers.reduce((p, c)=> p + c, 0) / numbers.length;
+}
+
+module.exports = {average
 
 it('computes average of a list of numbers', ()=> {
   // floating point numbers cannot be compared for equality,
